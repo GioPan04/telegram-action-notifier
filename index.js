@@ -9,7 +9,7 @@ try {
     const appName = core.getInput('app-name');
     const bot = new Bot(token, {polling: true});
     const message = `<b>🎉🎉🎉 Nuova versione di ${appName} compilata! 🎉🎉🎉</b>\n\n🌲 Branch: <code>ghref</code>\n🏷 Commit: <code>sha</code>\n👤 Avviato da: <code>ghactor</code>\n\n📝 Nome versione: <code>versionname</code>\n🔢 Numero build: <code>versionnumber</code>\n\nCompilato per iOS, Android`;
-    bot.sendMessage(chatid,message,{parse_mode : "html", reply_markup: {
+    bot.sendMessage(chatId,message,{parse_mode : "html", reply_markup: {
         inline_keyboard: [
             [{
                 text: '📲  SCARICA L\'APK',
