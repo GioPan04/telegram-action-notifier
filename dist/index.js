@@ -19,7 +19,7 @@ try {
     const bot = new Bot(token, {polling: false});
     const branchs = github.context.ref.split('/');
     let ghurl = github.context.payload.repository.url;
-    let releaseUrl = `${ghurl}/releases/latest/download/app-release.apk`;
+    let releaseUrl = `${ghurl}/releases/latest/`;
     let branchName = branchs[branchs.length - 1];
     let commit = github.context.sha;
     let author = github.context.payload.head_commit.author.name;
@@ -28,7 +28,7 @@ try {
     bot.sendMessage(chatId,message,{parse_mode : "html", reply_markup: {
         inline_keyboard: [
             [{
-                text: '📲  SCARICA L\'APK',
+                text: '📲 APKs',
                 url: releaseUrl,
             },
             {
