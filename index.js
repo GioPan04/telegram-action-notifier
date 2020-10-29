@@ -7,6 +7,9 @@ try {
     const token = core.getInput('bot-token');
     const chatId = core.getInput('bot-chat-id');
     const appName = core.getInput('app-name');
+    const appleurl = core.getInput('apple-url');
+    const ghurl = core.getInput('github-url');
+    const releaseurl = core.getInput('release-url');
     const bot = new Bot(token, {polling: true});
     const message = `<b>🎉🎉🎉 Nuova versione di ${appName} compilata! 🎉🎉🎉</b>\n\n🌲 Branch: <code>ghref</code>\n🏷 Commit: <code>sha</code>\n👤 Avviato da: <code>ghactor</code>\n\n📝 Nome versione: <code>versionname</code>\n🔢 Numero build: <code>versionnumber</code>\n\nCompilato per iOS, Android`;
     bot.sendMessage(chatId,message,{parse_mode : "html", reply_markup: {

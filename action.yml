@@ -7,6 +7,15 @@ inputs:
   bot-chat-id:
     description: 'The telegram chat id where to send the message'
     required: true
+  release-url:
+    description: 'The telegram chat id where to send the message'
+    required: true
+  github-url:
+    description: 'The telegram chat id where to send the message'
+    required: true
+  apple-url:
+    description: 'The telegram chat id where to send the message'
+    required: true
   app-name:
     description: 'The telegram chat id where to send the message'
     required: true
