@@ -11,14 +11,15 @@ const github = __webpack_require__(8408);
 const Bot = __webpack_require__(5487);
 
 try {
-   /*  const token = core.getInput('bot-token');
+    const token = core.getInput('bot-token');
     const chatId = core.getInput('bot-chat-id');
     const appName = core.getInput('app-name');
     const appleurl = core.getInput('apple-url');
-    const releaseurl = core.getInput('release-url');
+
     const bot = new Bot(token, {polling: false});
     const branchs = github.context.ref.split('/');
     let ghurl = github.context.payload.repository.url;
+    let releaseUrl = `${ghurl}/releases/latest/download/app-release.apk`;
     let branchName = branchs[branchs.length - 1];
     let commit = github.context.sha;
     let author = github.context.payload.head_commit.author.name;
@@ -27,7 +28,7 @@ try {
         inline_keyboard: [
             [{
                 text: '📲  SCARICA L\'APK',
-                url: releaseurl,
+                url: releaseUrl,
             },
             {
                 text: '🖥  GITHUB',
@@ -40,9 +41,7 @@ try {
         ]
     }})
     const payload = JSON.stringify(github.context.payload, undefined, 2)
-    console.log(`The event payload: ${payload}`); */
-    const bot = new Bot("1343740492:AAGlkR7ke6W67aS8x_A5Tzyh4KEppHNfVE8", {polling: false});
-    bot.sendMessage(235799750, 'ciao');
+    console.log(`The event payload: ${payload}`);
 } catch (error) {
     core.setFailed(error.message);
 }
