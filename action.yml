@@ -7,6 +7,10 @@ inputs:
   bot-chat-id:
     description: 'The telegram chat id where to send the message'
     required: true
+  app-name:
+    description: 'The telegram chat id where to send the message'
+    required: true
+    default: 'App'
 outputs:
   time:
     description: 'Time'
