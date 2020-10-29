@@ -1,5 +1,6 @@
 name: 'Telegram Action Notifier'
 description: 'Get a message when a build compile'
+main: 'dist/index.js'
 inputs:
   bot-token:
     description: 'The telegram bot token'
