@@ -16,7 +16,8 @@ try {
     let branchName = branchs[branchs.length - 1];
     let commit = github.context.sha;
     let author = github.context.payload.head_commit.author.name;
-    const message = `<b>🎉🎉🎉 Nuova versione di ${appName} compilata! 🎉🎉🎉</b>\n\n🌲 Branch: <code>${branchName}</code>\n🏷 Commit: <code>${commit}</code>\n👤 Avviato da: <code>${author}</code>\n\n📝 Nome versione: <code>versionname</code>\n🔢 Numero build: <code>versionnumber</code>\n\nCompilato per iOS, Android`;
+    let commitMessage = github.context.payload.head_commit.message;
+    const message = `<b>🎉🎉🎉 Nuova versione di ${appName} compilata! 🎉🎉🎉</b>\n\n🌲 Branch: <code>${branchName}</code>\n🏷 Commit: <code>${commit}</code>\n📜 Messaggio: <code>${commitMessage}</code>\n👤 Avviato da: <code>${author}</code>\n\n📝 Nome versione: <code>versionname</code>\n🔢 Numero build: <code>versionnumber</code>\n\nCompilato per iOS, Android`;
     bot.sendMessage(chatId,message,{parse_mode : "html", reply_markup: {
         inline_keyboard: [
             [{
