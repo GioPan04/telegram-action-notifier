@@ -1,0 +1,15 @@
+name: 'Telegram Action Notifier'
+description: 'Get a message when a build compile'
+inputs:
+  bot-token:
+    description: 'The telegram bot token'
+    required: true
+  bot-chat-id:
+    description: 'The telegram chat id where to send the message'
+    required: true
+outputs:
+  time:
+    description: 'Time'
+runs:
+  using: 'node12'
+  main: 'index.js'
